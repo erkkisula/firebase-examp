@@ -1,0 +1,28 @@
+<h1>Create user</h1>
+<form class="create-form" [formGroup]="addUserForm" (ngSubmit)="addNewUser()">
+  <input
+    type="text"
+    placeholder="Eesnimi"
+    formControlName="firstname"
+    class="form-control"
+  /><br />
+  <input
+    type="text"
+    placeholder="Perenimi"
+    formControlName="lastname"
+    class="form-control"
+  /><br />
+  <input
+    type="text"
+    placeholder="Email"
+    formControlName="email"
+    class="form-control"
+  /><br />
+  <button class="button" type="submit">Create</button>
+</form>
+<h1>User list</h1>
+<div class="user" *ngFor="let user of users">
+  Eesnimi: {{ user.firstname }} <br />
+  Perenimi: {{ user.lastname }} <br />
+  Email: {{ user.email }} <br />
+</div>
